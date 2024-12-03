@@ -17,7 +17,7 @@ use App\Http\Controllers\AddressController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+  
 Route::get('/', function () {
     return view('index');
 }) ->name('index');
@@ -44,12 +44,6 @@ Route::get('/updateProducts/{product}',[App\Http\Controllers\ProductController::
 Route::get('/showProducts/{product}',[App\Http\Controllers\ProductController::class,'show'])->name('pshow');
 
 Route::delete('/destroyProducs/{product}',App\Http\Controllers\ProductController::class,'destroy')->name('pdestroy');
-
-*/
-
-
-
-/*
 Route::get('/indexProducts', [App\Http\Controllers\ProductController::class, 'index'])-> name('products');
 
 Route::get('/createProducts', [App\Http\Controllers\ProductController::class, 'create'])-> name('pcreate');
