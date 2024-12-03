@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
-    // Definir los campos que se pueden llenar masivamente
+    
     protected $fillable = [
         'street',
         'internal_num',
@@ -21,7 +21,7 @@ class Address extends Model
         'client_id'
     ];
 
-    // Relación con el modelo Client
+   
     public function client()
     {
         return $this->belongsTo(Client::class);

@@ -3,7 +3,6 @@
 @section('content')
 <h2 class="text-center mb-4">Índice de Ventas</h2>
 
-<!-- Botones para navegación -->
 <div class="d-flex justify-content-around mb-4">
     <a href="{{ route('sales.create') }}" class="btn btn-success">
         <i class="fa-solid fa-plus"></i> Agregar Venta
@@ -16,7 +15,7 @@
     </a>
 </div>
 
-<!-- Tabla estilizada -->
+
 <table class="table table-bordered table-striped table-hover">
     <thead class="table-dark text-center">
         <tr>
@@ -46,7 +45,7 @@
                 <td class="text-center">{{ \Carbon\Carbon::parse($sale->sale_date)->format('d-m-Y') }}</td>
 
                 <td class="text-center">
-                    <!-- Botones de acciones -->
+                    
                     <a href="{{ route('sales.show', $sale) }}" class="btn btn-info">
                         <i class="fa-solid fa-eye"></i>
                     </a>

@@ -50,9 +50,7 @@ class BrandController extends Controller
         return view('admin/brands/show', compact('brand'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+   
     
         public function edit($id)
 {
@@ -61,9 +59,6 @@ class BrandController extends Controller
 }
     
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Brand $brand)
     {
         $brand->update($request->all()); // actualizamos los datos en la base de datos

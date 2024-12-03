@@ -1,15 +1,15 @@
 @extends('layout.main_template')
 
 @section('content')
-<!-- Vincula el CSS de Bootstrap -->
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Vincula los íconos de FontAwesome si los estás usando -->
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
 <h2>Index productos</h2>
 <br>
 
-<!-- Botones con íconos y colores -->
+
 <div class="mb-3">
     <button class="btn btn-primary">
         <a href="{{ route('products.create') }}" class="text-white text-decoration-none">
@@ -33,7 +33,7 @@
     </button>
 </div>
 
-<!-- Tabla mejorada con estilos -->
+
 <table class="table table-bordered table-striped table-hover">
     <thead class="table-dark">
         <tr>
@@ -51,13 +51,13 @@
         @foreach ($products as $p)
             <tr>
                 <td>{{ $p->nameProducts }}</td>
-                <td>{{ $p->brand->brand }}</td> <!-- Mostrar el nombre de la marca -->
+                <td>{{ $p->brand->brand }}</td>
                 <td>{{ $p->stock }}</td>
                 <td>{{ $p->brand->description }}</td>
                 <td>{{ $p->unit_price }}</td>
                 <td><img src="{{ asset('image/products/'.$p->imagen) }}" width="60" alt="{{ $p->nameProducts }}"></td>
                 <td>
-                    <!-- Botones con íconos -->
+                    
                     <button class="btn btn-info">
                         <a href="{{ route('products.show', $p) }}" class="text-white text-decoration-none">
                             <i class="fa-solid fa-eye"></i>
@@ -79,7 +79,7 @@
     </tbody>
 </table>
 
-<!-- Paginación -->
+
 {{$products->links()}}
 
 @endsection

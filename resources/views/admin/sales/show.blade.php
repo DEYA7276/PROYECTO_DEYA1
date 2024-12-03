@@ -1,7 +1,7 @@
 @extends('layout.main_template')
 
 @section('content')
-<!-- Botón de regreso a la lista de ventas -->
+
 <div class="mb-3">
     <button class="btn btn-primary">
         <a href="{{ route('sales.index') }}" class="text-white text-decoration-none">

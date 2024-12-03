@@ -29,20 +29,20 @@
 
     <div class="row justify-content-center">
         <div class="col-8">
-            <!-- Card para eliminar marca -->
+          
             <div class="card mb-4">
                 <div class="card-body">
                     <h3 class="text-center">¿Estás seguro que quieres eliminar la marca {{$brand->brand}}?</h3>
                     
                     <div class="d-flex justify-content-between mt-4">
-                        <!-- Botón para no eliminar, regresa al índice de marcas -->
+                        
                         <form action="{{ route('brands.index') }}" method="GET">
                             <button type="submit" class="btn btn-secondary btn-lg">
                                 <i class="fa-solid fa-arrow-left"></i> No
                             </button>
                         </form>
 
-                        <!-- Botón para confirmar la eliminación -->
+                     
                         <form action="{{ route('brands.destroy', $brand->id) }}" method="POST">
                             @method('DELETE')
                             @csrf

@@ -11,9 +11,7 @@ use App\Http\Requests\Products\StoreRequest;
 
 class ProductController extends Controller
 {
-    /**
-     * Mostrar la lista de productos.
-     */
+
     public function index()
     {
 
@@ -21,9 +19,7 @@ class ProductController extends Controller
         return view('admin.products.index', compact('products'));
     }
 
-    /**
-     * Mostrar el formulario para crear un nuevo producto.
-     */
+    
     public function create()
     {
         // Obtener todas las marcas disponibles
@@ -31,9 +27,7 @@ class ProductController extends Controller
         return view('admin.products.create', compact('brands'));
     }
 
-    /**
-     * Almacenar un nuevo producto.
-     */
+   
     public function store(StoreRequest $request)
     {
         // Validar los datos del formulario
@@ -58,26 +52,20 @@ class ProductController extends Controller
         return to_route('products.index')->with('status', 'Producto registrado');
     }
 
-    /**
-     * Mostrar un producto específico.
-     */
+    
     public function show(Product $product)
     {
         return view('admin.products.show', compact('product'));
     }
 
-    /**
-     * Mostrar el formulario para editar un producto.
-     */
+    
     public function edit(Product $product)
     {
         $brands = Brand::pluck('brand', 'id'); // Obtener las marcas
         return view('admin.products.edit', compact('product', 'brands'));
     }
 
-    /**
-     * Actualizar un producto.
-     */
+    
     public function update(Request $request, Product $product)
     {
         // Validar los datos

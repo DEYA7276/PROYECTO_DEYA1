@@ -4,10 +4,10 @@
 @include('fragments.formstyle')
 <h2>Crear Cliente</h2>
 
-<!-- Estilos CSS -->
+
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-<!-- Mostrar errores de validación -->
+
 @if ($errors->any())
     <div class="error">
         @foreach ($errors->all() as $error)
@@ -16,14 +16,13 @@
     </div>
 @endif
 
-<!-- Botón para regresar al índice -->
+
 <button class="btn btn-secondary">
     <a href="{{ route('clients.index') }}" class="text-white text-decoration-none">
         <i class="fa-solid fa-list"></i> Clientes
     </a>
 </button>
 
-<!-- Formulario -->
 <form action="{{ route('clients.store') }}" method="POST">
     @csrf
     <div>

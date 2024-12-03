@@ -29,20 +29,20 @@
 
     <div class="row justify-content-center">
         <div class="col-8">
-            <!-- Card para eliminar cliente -->
+            
             <div class="card mb-4">
                 <div class="card-body">
                     <h3 class="text-center">¿Estás seguro que quieres eliminar al cliente {{$client->name}} {{$client->last_name}}?</h3>
                     
                     <div class="d-flex justify-content-between mt-4">
-                        <!-- Botón para no eliminar, regresa al índice de clientes -->
+                       
                         <form action="{{ route('clients.index') }}" method="GET">
                             <button type="submit" class="btn btn-secondary btn-lg">
                                 <i class="fa-solid fa-arrow-left"></i> No
                             </button>
                         </form>
 
-                        <!-- Botón para confirmar la eliminación -->
+                       
                         <form action="{{ route('clients.destroy', $client->id) }}" method="POST">
                             @method('DELETE')
                             @csrf

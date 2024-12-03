@@ -3,7 +3,7 @@
 @section('content')
 <h2 class="text-center mb-4">Index Brands</h2>
 
-<!-- Botones para navegación -->
+
 <div class="d-flex justify-content-around mb-4">
     <a href="{{ route('brands.create') }}" class="btn btn-success">
         <i class="fa-solid fa-plus"></i> Agregar Marca
@@ -16,7 +16,7 @@
     </a>
 </div>
 
-<!-- Tabla estilizada -->
+
 <table class="table table-bordered table-striped table-hover">
     <thead class="table-dark text-center">
         <tr>
@@ -31,7 +31,7 @@
                 <td class="text-center">{{ $b->brand }}</td>
                 <td class="text-center">{{ $b->description }}</td>
                 <td class="text-center">
-                    <!-- Botones de acciones -->
+                
                     <a href="{{ route('brands.show', $b) }}" class="btn btn-info">
                         <i class="fa-solid fa-eye"></i>
                     </a>
@@ -49,14 +49,14 @@
     </tbody>
 </table>
 
-<!-- Paginación -->
+
 <div class="d-flex justify-content-center mt-4">
     {{ $brands->links('pagination::bootstrap-4') }}
 </div>
 @endsection
 
 <style>
-    /* Estilo adicional para mejorar apariencia */
+ 
     h2 {
         font-family: 'Arial', sans-serif;
         font-weight: bold;

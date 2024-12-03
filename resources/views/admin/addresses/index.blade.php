@@ -1,15 +1,15 @@
 @extends('layout.main_template')
 
 @section('content')
-<!-- Vincula el CSS de Bootstrap -->
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Vincula los íconos de FontAwesome si los estás usando -->
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
 <h2>Índice de Direcciones</h2>
 <br>
 
-<!-- Botones para acciones principales -->
+
 <div class="mb-3">
     <a href="{{ route('addresses.create') }}" class="btn btn-primary text-white">
         <i class="fa-solid fa-plus-circle"></i> Crear dirección
@@ -19,7 +19,7 @@
     </a>
 </div>
 
-<!-- Tabla sencilla -->
+
 <table class="table table-bordered table-striped table-hover">
     <thead class="table-dark">
         <tr>
@@ -51,7 +51,7 @@
                 <td>{{ $address->postal_code }}</td>
                 <td>{{ $address->references }}</td>
                 <td>
-                    <!-- Botones para acciones -->
+                   
                     <a href="{{ route('addresses.show', $address) }}" class="btn btn-info text-white">
                         <i class="fa-solid fa-eye"></i>
                     </a>
@@ -69,7 +69,6 @@
     </tbody>
 </table>
 
-<!-- Paginación -->
 <div class="d-flex justify-content-center">
     {{ $addresses->links() }}
 </div>

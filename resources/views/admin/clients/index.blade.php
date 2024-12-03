@@ -52,7 +52,7 @@
 <div class="container mt-5">
     <h2 class="text-center mb-4">Lista de Clientes</h2>
 
-    <!-- Botones para navegación -->
+  
     <div class="d-flex justify-content-around mb-4">
         <a href="{{ route('clients.create') }}" class="btn btn-success">
             <i class="fa-solid fa-plus"></i> Agregar Cliente
@@ -65,7 +65,7 @@
         </a>
     </div>
 
-    <!-- Tabla estilizada -->
+    
     <table class="table table-bordered table-striped table-hover">
         <thead class="table-dark">
             <tr>
@@ -82,7 +82,7 @@
                     <td>{{ $client->email }}</td>
                     <td>{{ $client->phone ?? 'No especificado' }}</td>
                     <td>
-                        <!-- Botones de acciones -->
+                   
                         <a href="{{ route('clients.show', $client->id) }}" class="btn btn-info btn-sm">
                             <i class="fa-solid fa-eye"></i>
                         </a>

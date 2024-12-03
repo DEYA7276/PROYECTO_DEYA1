@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('country', 60)->nullable();
             $table->integer('postal_code')->nullable()->default(12);
             $table->string('references', 100)->nullable();
-            $table->foreignId('client_id')->nullable(); // Mantener la relación con el cliente
+            $table->foreignId('client_id')->nullable(); 
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

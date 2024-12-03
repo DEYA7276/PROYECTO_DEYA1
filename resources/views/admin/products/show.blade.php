@@ -29,7 +29,7 @@
 
     <div class="row justify-content-center">
         <div class="col-8">
-            <!-- Card para los detalles del producto -->
+          
             <div class="card mb-4">
                 <div class="card-body">
                     <h3 class="text-center mb-4">Información del Producto</h3>
@@ -39,7 +39,7 @@
                     <p><strong>Cantidad:</strong> {{$product->stock}}</p>
                     <p><strong>Precio Unitario:</strong> ${{$product->unit_price}}</p>
 
-                    <!-- Mostrar imagen si existe -->
+                   
                     @if ($product->imagen)
                         <div class="text-center mt-3">
                             <img src="{{ asset('image/products/' . $product->imagen) }}" class="img-fluid rounded" alt="Imagen del producto">
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <!-- Botón para regresar -->
+            
             <div class="text-center">
                 <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg">
                     <i class="fa-solid fa-arrow-left"></i> Regresar a la lista de productos

@@ -1,7 +1,7 @@
 @extends('layout.main_template')
 
 @section('content')
-<!-- Botón de regreso a la lista de direcciones -->
+
 <div class="mb-3">
     <button class="btn btn-primary">
         <a href="{{ route('addresses.index') }}" class="text-white text-decoration-none">

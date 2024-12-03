@@ -1,24 +1,24 @@
-/* Tamaño reducido para los botones de paginación */
+
 .pagination .page-item .page-link {
-    font-size: 12px;  /* Reduce el tamaño de la fuente */
-    padding: 5px 10px; /* Ajusta el padding */
+    font-size: 12px;  
+    padding: 5px 10px; 
     height: 30px;
     line-height: 30px;
 }
 
-/* Resaltar el botón activo */
+
 .pagination .page-item.active .page-link {
     background-color: #007bff;
     border-color: #007bff;
 }
 
-/* Botón deshabilitado */
+
 .pagination .page-item.disabled .page-link {
     background-color: #f1f1f1;
     border-color: #f1f1f1;
 }
 
-/* Asegurar que los botones no tengan bordes grandes */
+
 .pagination .page-link {
     border-radius: 5px;
 }

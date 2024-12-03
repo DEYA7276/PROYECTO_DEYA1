@@ -11,7 +11,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    // Asegúrate de que estos son los campos que puedes llenar
+    
     protected $fillable = [
         'nameProducts', 
         'stock', 
@@ -20,12 +20,7 @@ class Product extends Model
         'brand_id',
     ];
 
-    /**
-     * Relación con la marca.
-     */
-   
-
-    // Relación con el modelo Brand
+    
     public function brand()
     {
         return $this->belongsTo(Brand::class);

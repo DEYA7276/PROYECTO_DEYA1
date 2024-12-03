@@ -84,20 +84,14 @@ Route::get('/products/{product}/delete', [App\Http\Controllers\ProductController
 
 Route::resource('/clients',App\Http\Controllers\ClientController::class);
 
-
 Route::resource('/addresses', App\Http\Controllers\AddressController::class);
-
 
 
 Route::get('clients/{client}/delete', [ClientController::class, 'destroyConfirm'])->name('clients.destroyConfirm');
 Route::resource('/sales',App\Http\Controllers\SaleController::class);
 
-
 Route::delete('clients/{client}', [ClientController::class, 'destroy'])->name('clients.destroy');
 Route::get('clients/{client}/delete', [ClientController::class, 'destroyConfirm'])->name('clients.destroyConfirm');
-
-
-
 
 Route::get('clients/{client}/delete', [ClientController::class, 'destroyConfirm'])->name('clients.destroyConfirm');
 Route::resource('clients', ClientController::class);
